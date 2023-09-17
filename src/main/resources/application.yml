@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+userService:
+  ribbon:
+    listOfServers: localhost:8080, localhost:8081
+
+# 这里必须开启，EnableHystrix是开启的HystrixCommand的功能
+feign:
+  hystrix:
+    enabled: true
+
